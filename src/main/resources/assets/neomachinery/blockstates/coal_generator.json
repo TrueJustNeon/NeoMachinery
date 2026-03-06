@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "neomachinery:block/coal_generator" }
+  }
+}
