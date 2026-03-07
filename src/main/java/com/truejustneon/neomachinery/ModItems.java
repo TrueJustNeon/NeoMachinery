@@ -2,10 +2,12 @@ package com.truejustneon.neomachinery;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.bus.api.IEventBus;
 import net.minecraft.world.item.BlockItem;
-
+import net.minecraft.core.registries.Registries;
 import java.util.function.Supplier;
+import com.truejustneon.neomachinery.ModBlocks;
 
 public class ModItems {
 
@@ -28,8 +30,8 @@ public class ModItems {
         ITEMS.register(eventBus);
     }
     // BLOCK ITEMS
-public static final Supplier<BlockItem> COAL_GENERATOR_ITEM = ITEMS.registerSimpleBlockItem(
-    ModBlocks.COAL_GENERATOR,
-    new Item.Properties()
-); 
+public static final DeferredItem<BlockItem> COAL_GENERATOR_ITEM = ITEMS.registerSimpleBlockItem(
+    "coal_generator", // blockitem id
+    ModBlocks.COAL_GENERATOR // block that represents
+);
 }

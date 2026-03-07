@@ -30,7 +30,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 @Mod(NeoMachinery.MODID)
 public class NeoMachinery {
     public static final String MODID = "neomachinery";
@@ -41,25 +41,26 @@ public class NeoMachinery {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-public NeoMachinery(IEventBus modEventBus, ModContainer modContainer) {
-        ModBlocks.register(modEventBus);
-        ModItems.register(modEventBus);        
-    //    modEventBus.addListener(this::addCreative);
-    }
-
+public NeoMachinery(IEventBus modBus) {
+    ModBlocks.BLOCKS.register(modBus);
+    ModItems.ITEMS.register(modBus);
+    //Other stuff here
+}
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("NeoMachinery says hi for Common setup.");
     }
-public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NEOMACHINERY_TAB =
-        CREATIVE_MODE_TABS.register("neomachinery_tab", () -> CreativeModeTab.builder()
-                .title(Component.translatable("itemGroup.neomachinery.neomachinery_tab"))
-                .icon(() -> new ItemStack(ModItems.STEEL_INGOT.get()))
-                .displayItems((params, output) -> {
-                    output.accept(ModItems.STEEL_INGOT.get());
-                    output.accept(ModBlocks.COAL_GENERATOR.get());
-                    output.accept(ModItems.COAL_DUST.get());
-                })
-                .build()
+public static final Supplier<CreativeModeTab> NEOMACHINERY_TAB = CREATIVE_MODE_TABS.register("neomachinery_tab", () -> CreativeModeTab.builder()
+    //Set the title of the tab. Don't forget to add a translation!
+    .title(Component.translatable("itemGroup.neomachinery.neomachinery_tab"))
+    //Set the icon of the tab.
+    .icon(() -> new ItemStack(ModItems.STEEL_INGOT.get()))
+    //Add your items to the tab.
+    .displayItems((params, output) -> {
+        output.accept(ModItems.STEEL_INGOT.get());
+        output.accept(ModItems.COAL_DUST.get());
+        // Accepts an ItemLike. This assumes that MY_BLOCK has a corresponding item.
+        output.accept(ModBlocks.COAL_GENERATOR.get());
+    })
+    .build()
 );
-
 }
