@@ -1,6 +1,11 @@
 {
-  "parent": "neomachinery:block/coal_generator_base",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "front": "neomachinery:block/coal_generator_front_lit"
+    "down": "neomachinery:block/coal_generator_bottom",
+    "up": "neomachinery:block/coal_generator_top",
+    "north": "neomachinery:block/coal_generator_front",
+    "south": "neomachinery:block/coal_generator_back",
+    "west": "neomachinery:block/coal_generator_side",
+    "east": "neomachinery:block/coal_generator_side"
   }
 }
