@@ -38,6 +38,8 @@ public class NeoMachinery {
     
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+        DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
 public NeoMachinery(IEventBus modEventBus, ModContainer modContainer) {
         ModBlocks.register(modEventBus);
@@ -48,8 +50,6 @@ public NeoMachinery(IEventBus modEventBus, ModContainer modContainer) {
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("NeoMachinery says hi for Common setup.");
     }
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-        DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NeoMachinery.MODID);
 public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NEOMACHINERY_TAB =
         CREATIVE_MODE_TABS.register("neomachinery_tab", () -> CreativeModeTab.builder()
                 .title(Component.translatable("itemGroup.neomachinery.neomachinery_tab"))

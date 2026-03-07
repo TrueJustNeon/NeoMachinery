@@ -47,6 +47,8 @@ authors="TrueJustNeon"
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 Neon's tech dream mod
+This mod is inspired on so many others that adds machines to minecraft.
+I always wondered how would the "Perfect" tech mod would be, and so, i am discovering it.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
