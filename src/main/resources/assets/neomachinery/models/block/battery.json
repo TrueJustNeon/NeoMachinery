@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "neomachinery:block/battery_bottom",
+    "up": "neomachinery:block/battery_top",
+    "north": "neomachinery:block/battery_side",
+    "south": "neomachinery:block/battery_side",
+    "west": "neomachinery:block/battery_side",
+    "east": "neomachinery:block/battery_side"
+  }
+}

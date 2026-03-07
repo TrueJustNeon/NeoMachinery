@@ -63,6 +63,10 @@ public static final DeferredItem<BlockItem> BASIC_SOLAR_PANEL_ITEM = ITEMS.regis
     "basic_solar_panel", // blockitem id
     ModBlocks.BASIC_SOLAR_PANEL // block that represents
 );
+public static final DeferredItem<BlockItem> BATTERY_ITEM = ITEMS.registerSimpleBlockItem(
+    "battery", // blockitem id
+    ModBlocks.BATTERY // block that represents
+);
 
 // HAMMERS
 
