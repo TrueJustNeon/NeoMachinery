@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "neomachinery:block/coal_generator" }
+    "facing=north": { "model": "neomachinery:block/coal_generator" },
+    "facing=south": { "model": "neomachinery:block/coal_generator", "y": 180 },
+    "facing=west":  { "model": "neomachinery:block/coal_generator", "y": 270 },
+    "facing=east":  { "model": "neomachinery:block/coal_generator", "y": 90 }
   }
 }

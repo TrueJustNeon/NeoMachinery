@@ -1,13 +1,6 @@
 {
-  "itemGroup.neomachinery": "Example Mod Tab",
-  "block.neomachinery.example_block": "Example Block",
-  "item.neomachinery.example_item": "Example Item",
-
-  "neomachinery.configuration.title": "NeoMachinery Configs",
-  "neomachinery.configuration.section.neomachinery.common.toml": "NeoMachinery Configs",
-  "neomachinery.configuration.section.neomachinery.common.toml.title": "NeoMachinery Configs",
-  "neomachinery.configuration.items": "Item List",
-  "neomachinery.configuration.logDirtBlock": "Log Dirt Block",
-  "neomachinery.configuration.magicNumberIntroduction": "Magic Number Text",
-  "neomachinery.configuration.magicNumber": "Magic Number"
+  "block.neomachinery.coal_generator": "Coal Generator",
+  "item.neomachinery.coal_dust": "Coal Dust",
+  "item.neomachinery.steel_ingot": "Steel Ingot",
+  "itemGroup.neomachinery.neomachinery_tab": "NeoMachinery"
 }
