@@ -34,4 +34,8 @@ public static final DeferredItem<BlockItem> COAL_GENERATOR_ITEM = ITEMS.register
     "coal_generator", // blockitem id
     ModBlocks.COAL_GENERATOR // block that represents
 );
+public static final DeferredItem<BlockItem> BASIC_SOLAR_PANEL_ITEM = ITEMS.registerSimpleBlockItem(
+    "basic_solar_panel", // blockitem id
+    ModBlocks.BASIC_SOLAR_PANEL // block that represents
+);
 }

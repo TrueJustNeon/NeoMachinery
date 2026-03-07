@@ -60,6 +60,7 @@ public static final Supplier<CreativeModeTab> NEOMACHINERY_TAB = CREATIVE_MODE_T
         output.accept(ModItems.COAL_DUST.get());
         // Accepts an ItemLike. This assumes that MY_BLOCK has a corresponding item.
         output.accept(ModBlocks.COAL_GENERATOR.get());
+        output.accept(ModBlocks.BASIC_SOLAR_PANEL.get());
     })
     .build()
 );

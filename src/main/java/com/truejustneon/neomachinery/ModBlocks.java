@@ -26,6 +26,14 @@ public static final DeferredBlock<Block> COAL_GENERATOR = BLOCKS.registerBlock(
             .explosionResistance(10.0f)
             .lightLevel(state -> 7) // The properties to use.
 );
+public static final DeferredBlock<Block> BASIC_SOLAR_PANEL = BLOCKS.registerBlock(
+        "basic_solar_panel",
+        Block::new, // The factory that the properties will be passed into.
+        BlockBehaviour.Properties.of()
+            .destroyTime(2.0f)
+            .explosionResistance(10.0f)
+            .lightLevel(state -> 5) // The properties to use.
+);
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
