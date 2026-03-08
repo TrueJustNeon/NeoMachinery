@@ -53,14 +53,20 @@ public static final Supplier<CreativeModeTab> NEOMACHINERY_TAB = CREATIVE_MODE_T
     //Set the title of the tab. Don't forget to add a translation!
     .title(Component.translatable("itemGroup.neomachinery.neomachinery_tab"))
     //Set the icon of the tab.
-    .icon(() -> new ItemStack(ModItems.STEEL_INGOT.get()))
+    .icon(() -> new ItemStack(ModItems.BASIC_CHIP.get()))
     //Add your items to the tab.
     .displayItems((params, output) -> {
         output.accept(ModItems.STEEL_INGOT.get());
         output.accept(ModItems.COAL_DUST.get());
+        output.accept(ModItems.BASIC_CHIP.get());
+        output.accept(ModItems.SOLAR_PANEL.get());
+        output.accept(ModItems.IRON_PLATE.get());
+        output.accept(ModItems.STEEL_PLATE.get());
+        output.accept(ModItems.COPPER_WIRE.get());
         // Accepts an ItemLike. This assumes that MY_BLOCK has a corresponding item.
         output.accept(ModBlocks.COAL_GENERATOR.get());
         output.accept(ModBlocks.BASIC_SOLAR_PANEL.get());
+        output.accept(ModBlocks.BATTERY.get());
     })
     .build()
 );

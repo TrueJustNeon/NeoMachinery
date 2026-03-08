@@ -13,6 +13,9 @@ import net.minecraft.world.item.Item;
 import java.util.function.Supplier;
 import net.minecraft.world.level.material.MapColor;
 
+import com.truejustneon.neomachinery.block.CoalGeneratorBlock;
+import com.truejustneon.neomachinery.block.BasicSolarPanelBlock;
+
 public class ModBlocks {
 
 
@@ -20,11 +23,10 @@ public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBloc
 
 public static final DeferredBlock<Block> COAL_GENERATOR = BLOCKS.registerBlock(
         "coal_generator",
-        Block::new, // The factory that the properties will be passed into.
+        CoalGeneratorBlock::new, // The factory that the properties will be passed into.
         BlockBehaviour.Properties.of()
             .destroyTime(2.0f)
             .explosionResistance(10.0f)
-            .lightLevel(state -> 7) // The properties to use.
 );
 public static final DeferredBlock<Block> BATTERY = BLOCKS.registerBlock(
         "battery",
@@ -32,15 +34,15 @@ public static final DeferredBlock<Block> BATTERY = BLOCKS.registerBlock(
         BlockBehaviour.Properties.of()
             .destroyTime(2.0f)
             .explosionResistance(10.0f)
-            .lightLevel(state -> 7) // The properties to use.
+            .lightLevel(state -> 1) // The properties to use.
 );
 public static final DeferredBlock<Block> BASIC_SOLAR_PANEL = BLOCKS.registerBlock(
         "basic_solar_panel",
-        Block::new, // The factory that the properties will be passed into.
+        BasicSolarPanelBlock::new, // The factory that the properties will be passed into.
         BlockBehaviour.Properties.of()
             .destroyTime(2.0f)
             .explosionResistance(10.0f)
-            .lightLevel(state -> 5) // The properties to use.
+            .lightLevel(state -> 2) // The properties to use.
 );
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

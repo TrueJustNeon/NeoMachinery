@@ -6,6 +6,7 @@
     "north": "neomachinery:block/coal_generator_front_lit",
     "south": "neomachinery:block/coal_generator_back",
     "west": "neomachinery:block/coal_generator_side",
-    "east": "neomachinery:block/coal_generator_side"
+    "east": "neomachinery:block/coal_generator_side",
+    "particle": "neomachinery:block/coal_generator_front_lit"
   }
 }

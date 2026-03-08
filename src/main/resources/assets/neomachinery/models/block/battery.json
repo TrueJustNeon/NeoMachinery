@@ -6,6 +6,7 @@
     "north": "neomachinery:block/battery_side",
     "south": "neomachinery:block/battery_side",
     "west": "neomachinery:block/battery_side",
-    "east": "neomachinery:block/battery_side"
+    "east": "neomachinery:block/battery_side",
+    "particle": "neomachinery:block/battery_top"
   }
 }

@@ -3,9 +3,12 @@
   "block.neomachinery.basic_solar_panel": "Basic Solar Panel",
   "block.neomachinery.battery": "Battery",
   "item.neomachinery.coal_dust": "Coal Dust",
+  "item.neomachinery.hammer": "Hammer",
+  "item.neomachinery.basic_chip": "Basic Chip",
   "item.neomachinery.steel_ingot": "Steel Ingot",
   "item.neomachinery.steel_plate": "Steel Plate",
   "item.neomachinery.iron_plate": "Iron Plate",
   "item.neomachinery.solar_panel": "Solar Panel",
+  "item.neomachinery.copper_wire": "Copper Wire",
   "itemGroup.neomachinery.neomachinery_tab": "NeoMachinery"
 }

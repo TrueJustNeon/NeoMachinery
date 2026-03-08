@@ -1,8 +1,5 @@
 {
   "variants": {
-    "facing=north": { "model": "neomachinery:block/battery" },
-    "facing=east": { "model": "neomachinery:block/battery", "y": 90 },
-    "facing=south": { "model": "neomachinery:block/battery", "y": 180 },
-    "facing=west": { "model": "neomachinery:block/battery", "y": 270 }
+    "": { "model": "neomachinery:block/battery" }
   }
 }
