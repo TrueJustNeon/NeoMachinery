@@ -12,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import java.util.function.Supplier;
 import net.minecraft.world.level.material.MapColor;
+import com.truejustneon.neomachinery.block.BatteryBlock;
 
 import com.truejustneon.neomachinery.block.CoalGeneratorBlock;
 import com.truejustneon.neomachinery.block.BasicSolarPanelBlock;
@@ -32,17 +33,17 @@ public static final DeferredBlock<Block> COAL_GENERATOR = BLOCKS.registerBlock(
 );
 public static final DeferredBlock<Block> BATTERY = BLOCKS.registerBlock(
         "battery",
-        Block::new, // The factory that the properties will be passed into.
+        BatteryBlock::new, // The factory that the properties will be passed into.
         BlockBehaviour.Properties.of()
-            .destroyTime(2.0f)
+            .destroyTime(5.0f)
             .explosionResistance(10.0f)
             .lightLevel(state -> 1) // The properties to use.
 );
-public static final DeferredBlock<Block> BASIC_SOLAR_PANEL = BLOCKS.registerBlock(
+public static final DeferredBlock<BasicSolarPanelBlock> BASIC_SOLAR_PANEL = BLOCKS.registerBlock(
         "basic_solar_panel",
         BasicSolarPanelBlock::new, // The factory that the properties will be passed into.
         BlockBehaviour.Properties.of()
-            .destroyTime(2.0f)
+            .destroyTime(3.0f)
             .explosionResistance(10.0f)
             .lightLevel(state -> 2) // The properties to use.
 );

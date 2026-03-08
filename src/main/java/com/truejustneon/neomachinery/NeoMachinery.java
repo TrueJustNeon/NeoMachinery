@@ -32,6 +32,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import com.truejustneon.neomachinery.ModCreativeTabs;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import com.truejustneon.neomachinery.ModBlockEntities;
 
 @Mod(NeoMachinery.MODID)
 public class NeoMachinery {
@@ -47,6 +48,7 @@ public NeoMachinery(IEventBus modBus) {
     ModBlocks.BLOCKS.register(modBus);
     ModItems.ITEMS.register(modBus);
     ModCreativeTabs.CREATIVE_MODE_TABS.register(modBus);
+    ModBlockEntities.BLOCK_ENTITIES.register(modBus);
     //Other stuff here
 }
     private void commonSetup(FMLCommonSetupEvent event) {
