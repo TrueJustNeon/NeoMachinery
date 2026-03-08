@@ -10,5 +10,8 @@
   "item.neomachinery.iron_plate": "Iron Plate",
   "item.neomachinery.solar_panel": "Solar Panel",
   "item.neomachinery.copper_wire": "Copper Wire",
+  "item.neomachinery.resin": "Resin",
+  "item.neomachinery.rubber": "Rubber",
+  "item.neomachinery.copper_cable": "Copper Cable",
   "itemGroup.neomachinery.neomachinery_tab": "NeoMachinery"
 }

@@ -54,6 +54,21 @@ public class ModItems {
         Item::new,
         new Item.Properties()
     );
+    public static final Supplier<Item> COPPER_CABLE = ITEMS.registerItem(
+        "copper_cable",
+        Item::new,
+        new Item.Properties()
+    );
+    public static final Supplier<Item> RUBBER = ITEMS.registerItem(
+        "rubber",
+        Item::new,
+        new Item.Properties()
+    );
+    public static final Supplier<Item> RESIN = ITEMS.registerItem(
+        "resin",
+        Item::new,
+        new Item.Properties()
+    );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -30,7 +30,9 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.truejustneon.neomachinery.ModCreativeTabs;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+
 @Mod(NeoMachinery.MODID)
 public class NeoMachinery {
     public static final String MODID = "neomachinery";
@@ -44,30 +46,11 @@ public class NeoMachinery {
 public NeoMachinery(IEventBus modBus) {
     ModBlocks.BLOCKS.register(modBus);
     ModItems.ITEMS.register(modBus);
+    ModCreativeTabs.CREATIVE_MODE_TABS.register(modBus);
     //Other stuff here
 }
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("NeoMachinery says hi for Common setup.");
     }
-public static final Supplier<CreativeModeTab> NEOMACHINERY_TAB = CREATIVE_MODE_TABS.register("neomachinery_tab", () -> CreativeModeTab.builder()
-    //Set the title of the tab. Don't forget to add a translation!
-    .title(Component.translatable("itemGroup.neomachinery.neomachinery_tab"))
-    //Set the icon of the tab.
-    .icon(() -> new ItemStack(ModItems.BASIC_CHIP.get()))
-    //Add your items to the tab.
-    .displayItems((params, output) -> {
-        output.accept(ModItems.STEEL_INGOT.get());
-        output.accept(ModItems.COAL_DUST.get());
-        output.accept(ModItems.BASIC_CHIP.get());
-        output.accept(ModItems.SOLAR_PANEL.get());
-        output.accept(ModItems.IRON_PLATE.get());
-        output.accept(ModItems.STEEL_PLATE.get());
-        output.accept(ModItems.COPPER_WIRE.get());
-        // Accepts an ItemLike. This assumes that MY_BLOCK has a corresponding item.
-        output.accept(ModBlocks.COAL_GENERATOR.get());
-        output.accept(ModBlocks.BASIC_SOLAR_PANEL.get());
-        output.accept(ModBlocks.BATTERY.get());
-    })
-    .build()
-);
+
 }

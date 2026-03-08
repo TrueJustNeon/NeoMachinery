@@ -27,7 +27,7 @@ public static final DeferredBlock<Block> COAL_GENERATOR = BLOCKS.registerBlock(
         BlockBehaviour.Properties.of()
             .destroyTime(2.0f)
             .explosionResistance(10.0f)
-            .lightLevel(state -> 7) // The properties to use.
+            .lightLevel(state -> state.getValue(CoalGeneratorBlock.LIT) ? 7 : 0)
 
 );
 public static final DeferredBlock<Block> BATTERY = BLOCKS.registerBlock(

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+
+  "pattern": [
+    "CCC",
+    "CIC",
+    "CHC"
+  ],
+
+  "key": {
+    "C": {
+      "item": "neomachinery:coal_dust"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "H": {
+      "item": "neomachinery:hammer"
+    }
+  },
+
+  "result": {
+    "id": "neomachinery:steel_ingot",
+    "count": 2
+  }
+}

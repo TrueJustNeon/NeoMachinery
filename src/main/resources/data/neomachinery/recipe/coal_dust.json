@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+
+  "pattern": [
+    "CCC",
+    "CHC",
+    "CCC"
+  ],
+
+  "key": {
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "H": {
+      "item": "neomachinery:hammer"
+    }
+  },
+
+  "result": {
+    "id": "neomachinery:coal_dust",
+    "count": 8
+  }
+}
