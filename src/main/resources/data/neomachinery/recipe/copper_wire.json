@@ -3,14 +3,14 @@
   "category": "misc",
 
   "pattern": [
-    "H  ",
-    "S  ",
-    "S  "
+    "   ",
+    " C ",
+    " H "
   ],
 
   "key": {
-    "S": {
-      "item": "neomachinery:steel_ingot"
+    "C": {
+      "item": "minecraft:copper_ingot"
     },
     "H": {
       "item": "neomachinery:hammer"
@@ -18,7 +18,7 @@
   },
 
   "result": {
-    "id": "neomachinery:steel_plate",
+    "id": "neomachinery:copper_wire",
     "count": 1
   }
 }

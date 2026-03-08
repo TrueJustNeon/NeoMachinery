@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+
+  "pattern": [
+    "III",
+    "BCB",
+    "SSS"
+  ],
+
+  "key": {
+    "C": {
+      "item": "neomachinery:copper_cable"
+    },
+    "I": {
+      "item": "neomachinery:iron_plate"
+    },
+    "S": {
+      "item": "neomachinery:steel_plate"
+    },
+    "B": {
+      "item": "neomachinery:basic_chip"
+    }
+  },
+
+  "result": {
+    "id": "neomachinery:solar_panel",
+    "count": 1
+  }
+}

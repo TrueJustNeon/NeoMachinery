@@ -4,7 +4,7 @@
 
   "pattern": [
     "RRR",
-    "WWW ",
+    "WWW",
     "RRR"
   ],
 
@@ -19,6 +19,6 @@
 
   "result": {
     "id": "neomachinery:copper_cable",
-    "count": 1
+    "count": 3
   }
 }
