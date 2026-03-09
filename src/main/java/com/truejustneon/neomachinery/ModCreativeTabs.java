@@ -37,6 +37,7 @@ public static final Supplier<CreativeModeTab> NEOMACHINERY_TAB = CREATIVE_MODE_T
         // BLOCKS
         output.accept(ModBlocks.COAL_GENERATOR.get());
         output.accept(ModBlocks.BASIC_SOLAR_PANEL.get());
+        output.accept(ModBlocks.ADVANCED_SOLAR_PANEL.get());
         output.accept(ModBlocks.BATTERY.get());
     })
     .build()
