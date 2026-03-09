@@ -23,30 +23,24 @@ public class BatteryBlockEntity extends BlockEntity {
 
     public static void tick(Level level, BlockPos pos, BlockState state, BatteryBlockEntity block) {
 
-        if (level.isClientSide) return;
+    if (level.isClientSide) return;
 
-        if (block.energy.getEnergyStored() <= 0) return;
+    BlockPos belowPos = pos.below();
 
-        // try pushing energy to all sides
-        for (Direction direction : Direction.values()) {
+    IEnergyStorage storage = level.getCapability(
+            Capabilities.EnergyStorage.BLOCK,
+            belowPos,
+            Direction.UP
+    );
 
-            BlockPos targetPos = pos.relative(direction);
+    if (storage != null) {
 
-            IEnergyStorage storage = level.getCapability(
-                    Capabilities.EnergyStorage.BLOCK,
-                    targetPos,
-                    direction.getOpposite()
-            );
+        int extract = block.energy.extractEnergy(200, true);
+        int accepted = storage.receiveEnergy(extract, false);
 
-            if (storage != null) {
-
-                int extract = block.energy.extractEnergy(200, true);
-                int accepted = storage.receiveEnergy(extract, false);
-
-                block.energy.extractEnergy(accepted, false);
-            }
-        }
+        block.energy.extractEnergy(accepted, false);
     }
+}
 
     public IEnergyStorage getEnergyStorage() {
         return energy;

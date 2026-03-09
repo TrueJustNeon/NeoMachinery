@@ -2,7 +2,7 @@ package com.truejustneon.neomachinery.block;
 
 import com.mojang.serialization.MapCodec;
 import com.truejustneon.neomachinery.ModBlockEntities;
-import com.truejustneon.neomachinery.block.entity.BasicSolarPanelBlockEntity;
+import com.truejustneon.neomachinery.block.entity.AdvancedSolarPanelBlockEntity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -29,15 +29,15 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 
-public class BasicSolarPanelBlock extends BaseEntityBlock {
+public class AdvancedSolarPanelBlock extends BaseEntityBlock {
 
-    public static final MapCodec<BasicSolarPanelBlock> CODEC = simpleCodec(BasicSolarPanelBlock::new);
+    public static final MapCodec<AdvancedSolarPanelBlock> CODEC = simpleCodec(AdvancedSolarPanelBlock::new);
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 4, 16);
 
-    public BasicSolarPanelBlock(BlockBehaviour.Properties properties) {
+    public AdvancedSolarPanelBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
@@ -69,12 +69,12 @@ public class BasicSolarPanelBlock extends BaseEntityBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BasicSolarPanelBlockEntity(pos, state);
+        return new AdvancedSolarPanelBlockEntity(pos, state);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createTickerHelper(type, ModBlockEntities.BASIC_SOLAR_PANEL.get(), BasicSolarPanelBlockEntity::tick);
+        return createTickerHelper(type, ModBlockEntities.ADVANCED_SOLAR_PANEL.get(), AdvancedSolarPanelBlockEntity::tick);
     }
 
     @Override

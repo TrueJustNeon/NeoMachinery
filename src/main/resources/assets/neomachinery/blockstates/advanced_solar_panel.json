@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "neomachinery:block/advanced_solar_panel" },
+    "facing=east": { "model": "neomachinery:block/advanced_solar_panel", "y": 90 },
+    "facing=south": { "model": "neomachinery:block/advanced_solar_panel", "y": 180 },
+    "facing=west": { "model": "neomachinery:block/advanced_solar_panel", "y": 270 }
+  }
+}

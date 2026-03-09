@@ -13,21 +13,21 @@ import net.neoforged.neoforge.energy.EnergyStorage;
 import net.neoforged.neoforge.energy.IEnergyStorage;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
-public class BasicSolarPanelBlockEntity extends BlockEntity {
+public class AdvancedSolarPanelBlockEntity extends BlockEntity {
 
-    private final EnergyStorage energy = new EnergyStorage(10000, 1000, 1000);
+    private final EnergyStorage energy = new EnergyStorage(40000, 1000, 1000);
 
-    public BasicSolarPanelBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.BASIC_SOLAR_PANEL.get(), pos, state);
+    public AdvancedSolarPanelBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.ADVANCED_SOLAR_PANEL.get(), pos, state);
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, BasicSolarPanelBlockEntity block) {
+    public static void tick(Level level, BlockPos pos, BlockState state, AdvancedSolarPanelBlockEntity block) {
 
         if (level.isClientSide) return;
 
         // generate power if day and sky visible
         if (level.isDay() && level.canSeeSky(pos.above())) {
-            block.energy.receiveEnergy(25, false);
+            block.energy.receiveEnergy(50, false);
         }
 
         // push power downward
@@ -41,7 +41,7 @@ public class BasicSolarPanelBlockEntity extends BlockEntity {
 
         if (storage != null && block.energy.getEnergyStored() > 0) {
 
-            int extract = block.energy.extractEnergy(25, true);
+            int extract = block.energy.extractEnergy(50, true);
             int accepted = storage.receiveEnergy(extract, false);
 
             block.energy.extractEnergy(accepted, false);

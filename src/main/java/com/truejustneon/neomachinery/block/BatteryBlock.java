@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-
+import net.minecraft.world.level.block.RenderShape;
 import javax.annotation.Nullable;
 
 public class BatteryBlock extends BaseEntityBlock {
@@ -38,4 +38,8 @@ public class BatteryBlock extends BaseEntityBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
         return createTickerHelper(type, ModBlockEntities.BATTERY.get(), BatteryBlockEntity::tick);
     }
+    @Override
+protected RenderShape getRenderShape(BlockState state) {
+    return RenderShape.MODEL;
+}
 }

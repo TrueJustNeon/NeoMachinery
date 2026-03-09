@@ -15,6 +15,7 @@ import net.minecraft.world.level.material.MapColor;
 import com.truejustneon.neomachinery.block.BatteryBlock;
 
 import com.truejustneon.neomachinery.block.CoalGeneratorBlock;
+import com.truejustneon.neomachinery.block.AdvancedSolarPanelBlock;
 import com.truejustneon.neomachinery.block.BasicSolarPanelBlock;
 
 public class ModBlocks {
@@ -22,7 +23,7 @@ public class ModBlocks {
 
 public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks("neomachinery");
 
-public static final DeferredBlock<Block> COAL_GENERATOR = BLOCKS.registerBlock(
+public static final DeferredBlock<CoalGeneratorBlock> COAL_GENERATOR = BLOCKS.registerBlock(
         "coal_generator",
         CoalGeneratorBlock::new, // The factory that the properties will be passed into.
         BlockBehaviour.Properties.of()
@@ -31,7 +32,7 @@ public static final DeferredBlock<Block> COAL_GENERATOR = BLOCKS.registerBlock(
             .lightLevel(state -> state.getValue(CoalGeneratorBlock.LIT) ? 7 : 0)
 
 );
-public static final DeferredBlock<Block> BATTERY = BLOCKS.registerBlock(
+public static final DeferredBlock<BatteryBlock> BATTERY = BLOCKS.registerBlock(
         "battery",
         BatteryBlock::new, // The factory that the properties will be passed into.
         BlockBehaviour.Properties.of()
@@ -44,6 +45,14 @@ public static final DeferredBlock<BasicSolarPanelBlock> BASIC_SOLAR_PANEL = BLOC
         BasicSolarPanelBlock::new, // The factory that the properties will be passed into.
         BlockBehaviour.Properties.of()
             .destroyTime(3.0f)
+            .explosionResistance(10.0f)
+            .lightLevel(state -> 2) // The properties to use.
+);
+public static final DeferredBlock<AdvancedSolarPanelBlock> ADVANCED_SOLAR_PANEL = BLOCKS.registerBlock(
+        "advanced_solar_panel",
+        AdvancedSolarPanelBlock::new, // The factory that the properties will be passed into.
+        BlockBehaviour.Properties.of()
+            .destroyTime(5.0f)
             .explosionResistance(10.0f)
             .lightLevel(state -> 2) // The properties to use.
 );
