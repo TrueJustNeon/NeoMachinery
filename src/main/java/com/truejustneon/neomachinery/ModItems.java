@@ -49,6 +49,11 @@ public class ModItems {
         Item::new,
         new Item.Properties()
     );
+    public static final Supplier<Item> ADVANCED_CHIP = ITEMS.registerItem(
+        "advanced_chip",
+        Item::new,
+        new Item.Properties()
+    );
     public static final Supplier<Item> COPPER_WIRE = ITEMS.registerItem(
         "copper_wire",
         Item::new,

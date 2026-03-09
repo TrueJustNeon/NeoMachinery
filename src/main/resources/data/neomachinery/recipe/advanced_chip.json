@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+
+  "pattern": [
+    "RRR",
+    "CCC",
+    "PWP"
+  ],
+
+  "key": {
+    "C": {
+      "item": "neomachinery:basic_chip"
+    },
+    "P": {
+      "item": "neomachinery:steel_plate"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "W": {
+      "item": "neomachinery:copper_cable"
+    }
+  },
+
+  "result": {
+    "id": "neomachinery:advanced_chip",
+    "count": 1
+  }
+}

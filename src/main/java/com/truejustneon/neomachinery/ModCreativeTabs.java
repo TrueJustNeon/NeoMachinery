@@ -27,6 +27,7 @@ public static final Supplier<CreativeModeTab> NEOMACHINERY_TAB = CREATIVE_MODE_T
         output.accept(ModItems.STEEL_INGOT.get());
         output.accept(ModItems.COAL_DUST.get());
         output.accept(ModItems.BASIC_CHIP.get());
+        output.accept(ModItems.ADVANCED_CHIP.get());
         output.accept(ModItems.SOLAR_PANEL.get());
         output.accept(ModItems.IRON_PLATE.get());
         output.accept(ModItems.STEEL_PLATE.get());

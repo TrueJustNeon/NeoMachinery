@@ -1,6 +1,6 @@
 {
 	"format_version": "1.9.0",
-	"credit": "Made with Blockbench",
+	"credit": "Made by TrueJustNeon",
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "neomachinery:block/basic_solar_panel",
